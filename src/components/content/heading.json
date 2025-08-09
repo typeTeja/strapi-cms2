@@ -1,0 +1,8 @@
+{
+    "collectionName": "components_content_headings",
+    "info": { "displayName": "Heading" },
+    "attributes": {
+      "level": { "type": "enumeration", "enum": ["h2", "h3", "h4"] },
+      "text": { "type": "string" }
+    }
+  }

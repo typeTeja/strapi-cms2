@@ -1,0 +1,9 @@
+{
+    "collectionName": "components_shared_seo",
+    "info": { "displayName": "SEO", "description": "SEO metadata" },
+    "attributes": {
+      "meta_title": { "type": "string" },
+      "meta_description": { "type": "text" },
+      "og_image": { "type": "media", "multiple": false, "allowedTypes": ["images"] }
+    }
+  }

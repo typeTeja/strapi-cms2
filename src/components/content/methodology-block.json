@@ -1,0 +1,8 @@
+{
+    "collectionName": "components_content_methodology_blocks",
+    "info": { "displayName": "Methodology Block" },
+    "attributes": {
+      "title": { "type": "string" },
+      "description": { "type": "richtext" }
+    }
+  }

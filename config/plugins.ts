@@ -1,0 +1,41 @@
+export default ({ env }) => ({
+    graphql: {
+      enabled: true,
+      config: {
+        defaultLimit: 25,
+        maxLimit: 100,
+        apolloServer: {
+          introspection: true,
+        },
+        // Enable deep filtering throughout
+        depthLimit: 15,
+        nestedMutations: true,
+      },
+    },
+    i18n: {
+      enabled: true,
+      config: {
+        defaultLocale: env('I18N_DEFAULT_LOCALE', 'en'),
+        locales: ['en'], // extend later for multilingual
+      },
+    },
+    'users-permissions': {
+      config: {
+        jwtSecret: env('JWT_SECRET'),
+      },
+    },
+    upload: {
+      config: {
+        provider: '@strapi/provider-upload-cloudinary',
+        providerOptions: {
+          cloud_name: env('CLOUDINARY_NAME'),
+          api_key: env('CLOUDINARY_KEY'),
+          api_secret: env('CLOUDINARY_SECRET'),
+        },
+        actionOptions: {
+          upload: {},
+          delete: {},
+        },
+      },
+    },
+  });

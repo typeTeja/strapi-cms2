@@ -1,0 +1,9 @@
+{
+    "collectionName": "components_content_data_viz_blocks",
+    "info": { "displayName": "Data Visualization Block" },
+    "attributes": {
+      "chart_type": { "type": "enumeration", "enum": ["bar", "line", "pie"] },
+      "chart_data": { "type": "json" },
+      "caption": { "type": "string" }
+    }
+  }
