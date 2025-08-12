@@ -26,11 +26,13 @@ export default ({ env }) => ({
     },
     upload: {
       config: {
-        provider: '@strapi/provider-upload-cloudinary',
+        // Supabase upload provider
+        provider: 'strapi-upload-supabase-provider',
         providerOptions: {
-          cloud_name: env('CLOUDINARY_NAME'),
-          api_key: env('CLOUDINARY_KEY'),
-          api_secret: env('CLOUDINARY_SECRET'),
+          apiUrl: env('SUPABASE_API_URL'),
+          apiKey: env('SUPABASE_API_KEY'),
+          bucket: env('SUPABASE_BUCKET_NAME'),
+          directory: env('SUPABASE_BUCKET_DIRECTORY', ''),
         },
         actionOptions: {
           upload: {},
